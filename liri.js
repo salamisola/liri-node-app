@@ -44,13 +44,13 @@ var concertThis = function(artistEvent){
 	var artist = artistEvent;
 	/* request('https://rest.bandsintown.com/artists/" + artist + '/events?app_id=codingbootcamp', function (error, response, body) {
 		if(!error && response.statusCode = 200){ */
-			request('https://rest.bandsintown.com/artists/" + artist + '/events?app_id=codingbootcamp', function (error, response, body) {
+			request("https://rest.bandsintown.com/artists/" + artist + '/events?app_id=codingbootcamp', function (error, response, body) {
 		if(!error && response.statusCode == 200){
 		var band = JSON.parse(body); 
 			if(band.length > 0){
 				for(var i = 0; i < band.length; i++){
 					console.log('Venue Name: ' + band[i].venue.name);
-					console.log('Venue Location: ' + band[i].venue.city +', ' + band[i].venue.region+', ' + band[i].venue.country);
+					console.log("Venue Location: " + band[i].venue.city + "," + band[i].venue.region+', ' + band[i].venue.country);
 					console.log('Venue Location: ' +  band[i].venue.latitude + ", " + band[i].venue.longitude );	
 
 					//var concertDate = moment(band[i].datetime).format("MM/DD/YYYY hh:ss A");
