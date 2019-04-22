@@ -79,7 +79,16 @@ var movieThis = function(movieName){
 		console.log('Year: '+  jsonData.Year);	
 		console.log('Rated: '+  jsonData.Rated);	
 		console.log('IMDB Rating: '+  jsonData.imdbRating);	
-		console.log('')
+		console.log('Country: '+  jsonData.Country);	
+		console.log('Language: '+  jsonData.Language);	
+		console.log('Plot: '+  jsonData.Plot);	
+		console.log('Actors: '+  jsonData.Actors);	
+		console.log('Rotten Tomatoes Rating: '+  jsonData.tomatoRating);
+		console.log('Rotten Tomatoes URL: '+  jsonData.tomatoURL);			
+	  }
+	 
+	});
+		
 }
 
 var chooseApp = function(caseData, functionData){
