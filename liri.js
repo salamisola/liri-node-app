@@ -1,14 +1,15 @@
 require('dotenv').config();
-//var keys = require('./keys.js');
+var keys = require('./keys.js'); 
 var Spotify = require('node-spotify-api');
 var request = require('request');
 var fs = require('fs');
 var axios = require('axios');
 const moment = require('moment');
 //accessing keys info
+console.log(keys)
 var spotify = new Spotify({
-  id: '94566d9847e54475aabde2dd0d4d1430',
-  secret: '7d84738803204f86af3a730f71af33f9'
+  id:keys.spotify.id,
+  secret:keys.spotify.secret
 });
 
 var spotifyThisSong = function(songName){
