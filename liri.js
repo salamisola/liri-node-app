@@ -68,6 +68,12 @@ var concertThis = function(artistEvent){
 
 }
 
+var movieThis = function(movieName){
+	request('http://www.omdbapi.com/?i=tt3896198&apikey=d7cdd585&t=' + movieName + ' &y=&plot=short&r=json', function (error, response, body) {
+	  //console.log('error:', error); // Print the error if one occurred
+
+}
+
 var chooseApp = function(caseData, functionData){
 	switch(caseData){
 		case "spotify-this-song":
