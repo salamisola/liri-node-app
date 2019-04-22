@@ -71,7 +71,15 @@ var concertThis = function(artistEvent){
 var movieThis = function(movieName){
 	request('http://www.omdbapi.com/?i=tt3896198&apikey=d7cdd585&t=' + movieName + ' &y=&plot=short&r=json', function (error, response, body) {
 	  //console.log('error:', error); // Print the error if one occurred
-
+ 	   //console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+	  //console.log('body:', body); // Print the HTML for the Google homepage.
+	   if(!error && response.statusCode ==200){
+		var jsonData = JSON.parse(body); 
+		console.log('Title: '+  jsonData.Title);	
+		console.log('Year: '+  jsonData.Year);	
+		console.log('Rated: '+  jsonData.Rated);	
+		console.log('IMDB Rating: '+  jsonData.imdbRating);	
+		console.log('')
 }
 
 var chooseApp = function(caseData, functionData){
