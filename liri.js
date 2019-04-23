@@ -100,6 +100,9 @@ var chooseApp = function(caseData, functionData){
 		case "concert-this":
 		concertThis(functionData);
 		break;
+		case "movie-this":
+		movieThis(functionData);
+		break; 
 		default:
 		console.log('LIRI does not know');
 		break;
