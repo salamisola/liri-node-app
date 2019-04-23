@@ -92,6 +92,17 @@ var movieThis = function(movieName){
 		
 }
 
+//read File that included callback function. The callback function included err and data argument, so that if there is an error it will tell us
+//otherwise display data
+
+	fs.readFile('random.txt', 'utf8',function(err, data){
+		if(err){
+			throw err;
+		}
+		console.log(data);
+
+	});
+
 var chooseApp = function(caseData, functionData){
 	switch(caseData){
 		case "spotify-this-song":
