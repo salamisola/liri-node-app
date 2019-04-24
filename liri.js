@@ -95,13 +95,31 @@ var movieThis = function(movieName){
 //read File that included callback function. The callback function included err and data argument, so that if there is an error it will tell us
 //otherwise display data
 
-	fs.readFile('random.txt', 'utf8',function(err, data){
+	/* fs.readFile('random.txt', 'utf8',function(err, data){
 		if(err){
 			throw err;
 		}
 		console.log(data);
 
-	});
+	}); */
+
+	var doWhatItSays = function(){
+		fs.readFile('random.txt', 'utf8',function(err, data){
+			if(err){
+				throw err;
+			}
+			//create the array based on where the comma is
+			var dataArr = data.split(',');
+			//console.log(data);
+			//if data array is two, input two arguments
+			if(dataArr.length == 2){
+				pick(dataArr[0],dataArr[1]);
+				//if data array is one, input one of those arguments
+			}else if(dataArr.length == 1){
+				pick(dataArr[0]);
+			}
+		});
+	}
 
 var chooseApp = function(caseData, functionData){
 	switch(caseData){
@@ -114,6 +132,9 @@ var chooseApp = function(caseData, functionData){
 		case "movie-this":
 		movieThis(functionData);
 		break; 
+		case "do-what-it-says":
+		doWhatItSays(functionData);
+		break;
 		default:
 		console.log('LIRI does not know');
 		break;
