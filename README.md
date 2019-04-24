@@ -28,12 +28,12 @@ Liri takes in any of the commands listed below and responds as detailed under ea
    Response: Liri will execute a command as contained in the random.txt file. In this case it should spotify the song "I want it that way"
    Comment: This is not working well yet. Needs more work*****
 
-Each of the functionality commands has been tested and screenshots taken. The screenshots are saved in a google drive and made available througha shring link.
+Each of the functionality commands has been tested and screenshots taken. The screenshots are saved in a google drive and made available through a shared link.
 
 # Below is the link to the screenshots of liriApp functions being tested.
 https://docs.google.com/document/d/1jkwgdMKmkYgeCJR7ct5wtAUApM3bB7dThdhMArDv7bI/edit?usp=sharing.
 
-Additional functions: It the user types no song name under "spotify-this-song" command, liri defaults to songs by Ace of Base
+Additional functions: If the user types no song name under "spotify-this-song" command, liri defaults to songs by Ace of Base
                       If user types no movie under "movie-this" command, liri defaults to the movie "Mr. Nobody"
 
 
